@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body, #root {
+  width: 100%;
+  background-color: #f3f4f6;
+  color: #0e374e;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 800px) {
+  #root {
+    flex-wrap: wrap;
+  }
+}

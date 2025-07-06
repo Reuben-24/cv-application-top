@@ -1,0 +1,54 @@
+.resume-display {
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  min-width: 200px;
+}
+
+.resume-display-personal-details {
+  padding: 40px;
+  background-color: #0e374e;
+  color: white;
+}
+
+.resume-display-full-name {
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.resume-display-education, .resume-display-work {
+  padding: 40px;
+}
+
+.resume-display h2 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.resume-display h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.resume-display-education-entry, .resume-display-work-entry {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
