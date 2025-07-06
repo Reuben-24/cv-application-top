@@ -12,12 +12,16 @@ import FormWork from "./components/FormWork.jsx";
 import ResumeDisplay from "./components/ResumeDisplay.jsx";
 
 function App() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [personalDetails, setPersonalDetails] = useState({
+  const initialPersonalDetails = {
     fullName: "",
     email: "",
     phone: "",
-  });
+  };
+
+  const [resumeGenerated, setresumeGenerated] = useState(false);
+  const [personalDetails, setPersonalDetails] = useState(
+    initialPersonalDetails
+  );
 
   const [education, setEducation] = useState([]);
 
@@ -29,21 +33,20 @@ function App() {
     );
 
     if (confirmed) {
-      setPersonalDetails({ fullName: "", email: "", phone: "" });
+      setPersonalDetails(initialPersonalDetails);
       setEducation([]);
       setWork([]);
-      setIsSubmitted(false);
+      setresumeGenerated(false);
     }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsSubmitted(true);
+    setresumeGenerated(true);
   }
 
   return (
     <>
-
       <form id="resume-form" onSubmit={handleSubmit} autoComplete="on">
         <FormTitle />
         <FormPersonalDetails
@@ -52,17 +55,19 @@ function App() {
         />
         <FormEducation education={education} setEducation={setEducation} />
         <FormWork work={work} setWork={setWork} />
-        <FormActions handleClearForm={handleClearForm} />
+        <FormActions
+          handleClearForm={handleClearForm}
+          resumeGenerated={resumeGenerated}
+        />
       </form>
 
-      {isSubmitted && (
+      {resumeGenerated && (
         <ResumeDisplay
           personalDetails={personalDetails}
           education={education}
           work={work}
         />
       )}
-
     </>
   );
 }

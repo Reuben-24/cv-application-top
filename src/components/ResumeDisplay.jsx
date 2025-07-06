@@ -3,7 +3,7 @@ import EducationDisplay from "./EducationDisplay.jsx";
 
 export default function ResumeDisplay({ personalDetails, education, work }) {
   return (
-    <section className="resume-display">
+    <section className="resume-display" id="resume">
 
       <header className="resume-display-personal-details">
 
