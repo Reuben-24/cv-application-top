@@ -38,12 +38,6 @@ This project was developed as part of my React learning journey, with a focus on
 
 ---
 
-## 🖼️ Preview
-
-![App Preview](./images/project-thumbnails/resume-creator.png)
-
----
-
 ## 🧪 Getting Started
 
 To run the project locally:
